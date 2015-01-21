@@ -36,7 +36,10 @@ public class UserSessionFilter implements Filter {
 			ThreadSessionHelper.getUser();
 		}catch(GException ex){
 			if(ex.getType()==PlatformExceptionType.UserOfflineException){
-				resp.sendRedirect("/jjfc/admin/public/login.jsp");
+				response.getWriter().write("<script type='text/javascript'>window.top.location='/admin/public/login.jsp'</script>");
+//				response.getWriter().write("<script type='text/javascript'>alert(0)</script>");
+				return;
+//				resp.sendRedirect("/admin/public/login.jsp");
 			}
 		}
 		chain.doFilter(request, response);

@@ -13,7 +13,7 @@ public class ConfigCache {
 
 	private static Properties props = new Properties();
 	
-	private static final String confFilePath = "D:\\conf\\leshi.properties";
+	private static final String confFilePath = "D:\\conf\\jjfc.properties";
 	static{
 		load();
 	}
@@ -23,7 +23,7 @@ public class ConfigCache {
 			if(file.exists()){
 				props.load(FileUtils.openInputStream(file));
 			}else{
-				InputStream is = ConfigCache.class.getResourceAsStream("leshi.properties");
+				InputStream is = ConfigCache.class.getResourceAsStream("jjfc.properties");
 				props.load(is);
 				is.close();
 			}

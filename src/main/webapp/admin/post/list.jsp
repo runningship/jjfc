@@ -76,7 +76,11 @@ function doSearch(){
 <body>
 <form class="form-inline definewidth m20" name="form1"  method="get" onsubmit="return false;">
     <button type="button" class="btn btn-success" id="addnew">新增文章</button>
-    <button type="button" class="btn btn-success btn_subnmit hidden" onclick="doSearch();return false;">搜索</button>
+        <td class="tableleft">栏目</td>
+        <td><input type="text" name="lanmu"/></td>
+        <td class="tableleft">标题</td>
+        <td><input type="text" name="title"/></td>
+    <button type="button" class="btn btn-success btn_subnmit" onclick="doSearch();return false;">搜索</button>
 </form>
 
 <table class="table table-bordered table-hover definewidth m10">

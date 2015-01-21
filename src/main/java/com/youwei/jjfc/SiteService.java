@@ -60,11 +60,27 @@ public class SiteService {
 		Post news = dao.get(Post.class, id);
 		Board board = dao.get(Board.class, news.bid);
 		ModelAndView mv = new ModelAndView();
+		//一级菜单
 		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null or fid=0 order by orderx");
+		//二级菜单
 		List<Board> list = dao.listByParams(Board.class, "from Board where fid=? order by orderx" ,board.fid);
 		mv.jspData.put("boards", list);
 		mv.jspData.put("modules", modules);
 		mv.jspData.put("news", news);
+		return mv;
+	}
+	
+	@WebMethod
+	public ModelAndView topNews(int id){
+		Board board = dao.get(Board.class, id);
+		ModelAndView mv = new ModelAndView();
+		//一级菜单
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null or fid=0 order by orderx");
+		//二级菜单
+//		List<Board> list = dao.listByParams(Board.class, "from Board where fid=? order by orderx" ,board.fid);
+//		mv.jspData.put("boards", list);
+		mv.jspData.put("modules", modules);
+		mv.jspData.put("board", board);
 		return mv;
 	}
 	

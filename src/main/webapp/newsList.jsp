@@ -8,7 +8,8 @@
 <title>乐事不动产</title>
 <link rel="stylesheet" type="text/css" href="style/css.css" />
 <link rel="stylesheet" type="text/css" href="style/cons.css" />
-
+<script src="js/jquery-1.6.4.min.js"></script>
+<script src='js/main.js'></script>
 </head>
 
 <body>
@@ -21,7 +22,15 @@
   	
      <jsp:include page="left.jsp" />
      
-     <div class="newsList">
+     <c:if test="${currentBoard.type==0}">
+     	<div class="newsList">
+              <div class="margintop30 duanluo font_hui_14">
+            		${currentBoard.conts }
+             </div> 
+     	</div>
+     </c:if>
+     <c:if test="${currentBoard.type==1}">
+     	<div class="newsList">
      		<c:choose>
               <c:when test="${currentBoard!=null}">
                 <h1 class="titH2"> <span>${currentBoard.name }</span></h1>
@@ -83,6 +92,8 @@
           </div>   
      
      </div>
+     </c:if>
+     
     
 
 </div>

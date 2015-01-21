@@ -35,6 +35,7 @@
     	<url-pattern>/admin/board/*</url-pattern>
     	<url-pattern>/admin/post/*</url-pattern>
     	<url-pattern>/admin/index.jsp</url-pattern>
+    	<url-pattern>/admin/password.jsp</url-pattern>
     </filter-mapping>
 	
 	<filter>

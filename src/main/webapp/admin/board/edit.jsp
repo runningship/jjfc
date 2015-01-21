@@ -15,27 +15,7 @@
     <script type="text/javascript" src="${projectName}/js/common.js"></script>
     <script type="text/javascript" src="${projectName}/js/artDialog/jquery.artDialog.source.js?skin=default"></script>
     <script type="text/javascript" src="${projectName}/js/artDialog/plugins/iframeTools.source.js"></script>
-         <script type="text/javascript" src="${projectName}/js/buildHtml.js"></script>
-
-    <style type="text/css">
-        body {
-            padding-bottom: 40px;
-        }
-        .sidebar-nav {
-            padding: 9px 0;
-        }
-
-        @media (max-width: 980px) {
-            /* Enable use of floated navbar text */
-            .navbar-text.pull-right {
-                float: none;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-        }
-
-
-    </style>
+    <script type="text/javascript" src="${projectName}/js/buildHtml.js"></script>
 </head>
 <body>
 <form action="index.html" method="post" name="form1" class="definewidth m20">

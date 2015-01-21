@@ -2,7 +2,8 @@ package com.youwei.jjfc;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.lang.StringUtils;
+import org.bc.sdak.GException;
+import org.bc.web.PlatformExceptionType;
 import org.bc.web.ThreadSession;
 
 import com.youwei.jjfc.admin.entity.User;
@@ -14,7 +15,11 @@ public class ThreadSessionHelper {
     	if(session==null){
     		return null;
     	}
-    	return (User)session.getAttribute("user");
+    	User u = (User)session.getAttribute("user");
+    	if(u==null){
+    		throw new GException(PlatformExceptionType.UserOfflineException , "");
+    	}
+    	return u;
     }
     public static String getIp(){
     	HttpSession session = ThreadSession.getHttpSession();

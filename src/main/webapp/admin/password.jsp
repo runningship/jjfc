@@ -24,8 +24,6 @@
 </head>
 <body>
 <form name="form1" method="post" class="definewidth m20" onsubmit="return false;">
-<input name="fid" id="fid" type="hidden">
-<input name="id" id="id" type="hidden">
 <table class="table table-bordered table-hover m10">
 	<tr>
         <td class="tableleft">原始密码</td>
@@ -33,11 +31,11 @@
     </tr>
     <tr>
         <td class="tableleft">新设密码</td>
-        <td><input type="text" name="newPwd"/></td>
+        <td><input type="text" name="newPwd" id="newPwd" /></td>
     </tr>
     <tr>
         <td class="tableleft">重复密码</td>
-        <td><input type="text" name="Pwd"/></td>
+        <td><input type="text" name="Pwd" id="pwd" /></td>
     </tr>
     <tr>
         <td class="tableleft"></td>
@@ -61,13 +59,16 @@
     });
 
 function save(){
-    var a=$('form[name=form1]').serialize();
-    if (a.pwd.val()!=a.newPwd.val()) {
-        return ;
+    var a = $('#newPwd').val();
+    var b = $('#pwd').val();
+    if (a!=b) {
+        alert('两次密码输入不一致，请重新输入');
+        return;
     };
+    var a=$('form[name=form1]').serialize();
     YW.ajax({
         type: 'POST',
-        url: 'admin/user/modiyPwd',
+        url: '${projectName}/c/admin/user/modifyPwd',
         data:a,
         mysuccess: function(data){
             alert('修改成功');

@@ -15,14 +15,11 @@
  </head>
  <body>
 
-  <div class="header">
+  <div class="header" style="height:0px;">
     
       <div class="dl-title">
        <!--<img src="/chinapost/Public/assets/img/top.png">-->
       </div>
-
-    <div class="dl-log">欢迎您，<span class="dl-log-user">${user.name }</span><a href="./user/logout.jsp" title="退出系统" class="dl-log-quit">[退出]</a>
-    </div>
   </div>
    <div class="content">
     <div class="dl-main-nav">
@@ -31,6 +28,8 @@
         		<li class="nav-item dl-selected"><div class="nav-item-inner nav-home">系统管理</div></li>
 
       </ul>
+      <div style="position:absolute;right:0px;top:8px;" class="dl-log">欢迎您，<span class="dl-log-user">${user.name }</span><a href="./user/logout.jsp" title="退出系统" class="dl-log-quit">[退出]</a>
+      </div>
     </div>
     <ul id="J_NavContent" class="dl-tab-conten"> </ul>
    </div>

@@ -8,7 +8,7 @@
    <link rel="stylesheet" type="text/css" href="${projectName}/Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="${projectName}/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="${projectName}/Css/style.css" />
-    <script type="text/javascript" src="${projectName}/js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="${projectName}/admin/assets/js/jquery-1.8.1.min.js"></script>
     <script type="text/javascript" src="${projectName}/js/bootstrap.js"></script>
     <script type="text/javascript" src="${projectName}/js/ckform.js"></script>
     <script type="text/javascript" src="${projectName}/js/common.js"></script>
