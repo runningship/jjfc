@@ -19,6 +19,8 @@ public class Board {
 	
 	public String name;
 	
+	public String ename;
+	
 	public String fname;
 	
 	public Integer fid;
@@ -27,6 +29,10 @@ public class Board {
 	
 	//1 有子栏目，0没有子栏目
 	public Integer type;
+	
+	
+	//特殊标识
+	public String label="";
 	
 	//没有子栏目的栏目要有栏目内容
 	public String conts;

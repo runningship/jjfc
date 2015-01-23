@@ -98,6 +98,7 @@ function save(){
         data:a,
         mysuccess: function(data){
             alert('发布成功');
+            window.location.href="list.jsp";
         }
     });
 }

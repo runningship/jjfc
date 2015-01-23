@@ -21,7 +21,7 @@ public class BoardService {
 	public ModelAndView list(){
 		ModelAndView mv = new ModelAndView();
 		List<Map> list = dao.listAsMap("select name as name, fname as fname , orderx as orderx , id as id , fid as fid "
-				+ "from Board  order by orderx");
+				+ "from Board  order by fid, orderx");
 		mv.jspData.put("boards", list);
 		return mv;
 	}
@@ -64,8 +64,10 @@ public class BoardService {
 		Board po = dao.get(Board.class, board.id);
 		if(po!=null){
 			po.name = board.name;
+			po.ename = board.ename;
+			po.orderx = board.orderx;
+			po.conts = board.conts;
 			dao.saveOrUpdate(po);
-			
 			dao.execute("update Board set fname=? where fid=?", po.name,po.id);
 		}
 		return mv;

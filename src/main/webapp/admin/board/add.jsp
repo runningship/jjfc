@@ -14,9 +14,9 @@
     <script type="text/javascript" src="${projectName }/js/artDialog/jquery.artDialog.source.js?skin=default"></script>
     <script type="text/javascript" src="${projectName }/js/artDialog/plugins/iframeTools.source.js"></script>
     <script type="text/javascript" src="${projectName }/js/buildHtml.js"></script>
-         <script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/ueditor.all.js"> </script>
-<script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="${projectName}/js/ueditor1_4_3/lang/zh-cn/zh-cn.js"></script>
 	<script type="text/javascript">
 		function cfgChild(radio){
 			if(radio.value==1){
@@ -29,7 +29,7 @@
 		$(function(){
 			var ue = UE.getEditor('editor',{
 		        toolbars: [
-		            ['forecolor', 'simpleupload','insertimage','emotion','spechars', 'attachment', '|', 'fontfamily', 'fontsize', 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'formatmatch', 'pasteplain', '|', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|','justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', 'indent', 'rowspacingtop', 'rowspacingbottom', 'lineheight',
+		            ['source','forecolor', 'simpleupload','insertimage','emotion','spechars', 'attachment', '|', 'fontfamily', 'fontsize', 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'formatmatch', 'pasteplain', '|', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|','justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', 'indent', 'rowspacingtop', 'rowspacingbottom', 'lineheight',
 		            ]
 		        ],
 		  	});
@@ -53,6 +53,10 @@
     <tr>
         <td class="tableleft">名称</td>
         <td><input type="text" name="name"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">英文名</td>
+        <td><input type="text" name="ename"/></td>
     </tr>
     <tr>
         <td class="tableleft">序号</td>
@@ -96,6 +100,7 @@ function save(){
         data:a,
         mysuccess: function(data){
             alert('发布成功');
+            window.location.href="list.jsp";
         }
     });
 }

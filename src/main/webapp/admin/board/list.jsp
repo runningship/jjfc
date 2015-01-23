@@ -81,7 +81,6 @@ function delThis(id){
             url: '${projectName}/c/admin/board/delete?id='+id,
             data:'',
             mysuccess: function(data){
-                bloakAlert('删除成功');
                 window.location.reload();
             }
         });

@@ -107,7 +107,8 @@ function save(){
         url: '${projectName}/c/admin/post/update',
         data:a,
         mysuccess: function(data){
-            alert('保存成功');
+            alert('修改成功');
+            //window.location.href="list.jsp";
         }
     });
 }

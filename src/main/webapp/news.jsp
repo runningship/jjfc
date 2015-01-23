@@ -5,42 +5,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>乐事不动产</title>
+<title>和瑞金江房地产投资咨询有限公司
+</title>
 <link rel="stylesheet" type="text/css" href="style/css.css" />
-<link rel="stylesheet" type="text/css" href="style/cons.css" />
+<link rel="stylesheet" type="text/css" href="style/info.css" />
 </head>
 
 <body>
-
-<div class="warp w_topLine"></div>
-
-<jsp:include page="header.jsp" />
-
-<div class="conWarp marginTop45">
-
-     <div class="banner1">   <img src="images/banner1.jpg">  </div>
-
-     <jsp:include page="left.jsp" />
+<div class="warp h360 poR">
      
-     
-     <div class="newsList">
-     
-          <h1 class="titH2"> <span style="width:600px; display:inline-block;">${news.title }</span>
-          	<span style="font-size:12px;"><fmt:formatDate value="${news.addtime}" pattern="yyyy-MM-dd HH:mm"/></span></h1>
+        
+     <div class="infoBigImg"><span></span></div> 
+         
+     <div class="warp poA" style="top:0; left:0; z-index:100;">
+          <div class="wCon">
+               
+               <div class="fl mTop50"><img src="images/logo.png" /></div>
+               
+               <ul class="fr mTop50 nav">
+                    <li>
+                        <a href="index.jsp">
+                            首页 <br />
+                            <em>main</em>
+                            <i></i>
+                        </a>
+                    </li>
+                    <jsp:include page="header.jsp" />
+               </ul>
           
-          
-              <div class="margintop30 duanluo font_hui_14">
-            		${news.conts }
-             </div> 
-     
+          </div>
      </div>
-    
-    
 
 </div>
 
-<jsp:include page="footer.jsp" />
+<div class="warp">
 
+     <div class="wCon">
+     
+      	<jsp:include page="left.jsp" />
+	    <div class="infoRight">
+            <div class="tit"><span class="fr s">当前位置：首页 > ${topBoard.name} > ${currentBoard.name}</span></div>
+            <div class="tit"><span class="fl b">${news.title}</span></div>
+            ${news.conts}
+         </div>
+     </div>
+
+</div>
+<jsp:include page="footer.jsp" />
 </body>
 </html>
-

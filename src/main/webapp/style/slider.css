@@ -1,74 +1,337 @@
-/* Slider */
-#slider {
- width: 1002px;
- height: 350px;
- position:relative;
- background:#fff url('/images/loading.gif') no-repeat 50% 50%;
+
+$(function(){
+	
+	
+	
+   
+    $("#categria li").mouseover(function(){
+		
+		$(this).children(".cateLitBox").show();
+		
+	});	
+	
+	$("#categria li").mouseout(function(){
+		
+		$(this).children(".cateLitBox").hide();
+		
+	});	
+	
+	
+	
+	$("#PmLeft .item h3").click(function(){
+		
+		$(this).siblings("ul").slideToggle();
+		$(this).children("b").toggleClass("s");
+		
+	});
+	
+	$("#SelectBankTit").click(function(){
+		
+		$("#SelectBankBox").slideToggle();
+		
+	});
+	
+	
+	$("#nav ul li").hover(function(){
+		
+		$(this).children(".menuMore").toggle();
+		$(this).children("a").toggleClass("select");
+		
+	});
+	
+	$("#nav ul li .erji").hover(function(){
+			
+			$(this).children(".menuMore").toggle();
+			
+	});
+	
+	$("#PBspan1").click(function(){
+		
+		$("#PBspan2").removeClass("sel");
+		$("#PBspan3").removeClass("sel");
+		$(this).addClass("sel");
+		
+		$("#MMBox").children("div").css("display","none");
+		$("#MMBox").children("#PBSpanA").css("display","block");
+		
+	});
+	
+	$("#PBspan2").click(function(){
+		
+		$("#PBspan1").removeClass("sel");
+		$("#PBspan3").removeClass("sel");
+		$(this).addClass("sel");
+		
+		$("#MMBox").children("div").css("display","none");
+		$("#MMBox").children("#PBSpanB").css("display","block");
+		
+	});
+	
+	$("#PBspan3").click(function(){
+		
+		$("#PBspan1").removeClass("sel");
+		$("#PBspan2").removeClass("sel");
+		$(this).addClass("sel");
+		
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	var bigImg = $("#bigPic li");
+	var boxList = bigImg.size();
+	
+	for(var a=1; a<=boxList; a++){
+		
+		if(a == 1){
+			$("#litPic").append("<li class='s'>"+a+"</li>");
+		}else{
+			$("#litPic").append("<li>"+a+"</li>");
+		}
+		
+	}
+	
+	
+	var i = 0;
+	function show(){
+		
+		var litImg = $("#litPic li");
+		
+		bigImg.fadeOut("slow");
+    	bigImg.css("z-index","0");
+		
+		litImg.removeClass("s");
+		
+		if( (i+1) < boxList){
+			
+			bigImg.eq(i+1).css("z-index","1");
+			bigImg.eq(i+1).fadeIn("slow");
+			litImg.eq(i+1).addClass("s");
+			i++;
+			
+		}else{
+			
+			bigImg.eq(0).css("z-index","1");
+			bigImg.eq(0).fadeIn("slow");
+			litImg.eq(0).addClass("s");
+			i = 0;
+			
+		}
+    	
+	}
+	
+	/*var setIn = setInterval(function(){
+					   show();
+					},4000);	*/
+	
+	
+	var setIn = setInterval(function(){
+					   show();
+					},4000);	
+	
+/*	$("#litPic li").mouseover(function(){clearInterval(setIn);}).mouseout(function(){setIn=setInterval(function(){
+										   show();
+										   },4000);});*/
+	
+//延迟触发事件
+	var delay=function(t,fn){//接收两个参数 t延迟时间秒为单位，fn要执行的函数      
+		var _this=this,//请注意还要个免费的this参数可以让这个delay更完美          
+		d=setInterval(function(){                                       
+							   fn.apply(_this);                                       
+					  },t*1000);               
+		_this.onmouseout=function(){                        
+			clearInterval(d);  
+		};        
+	}
+	 // delay.apply(this,[0.5,function(){alert(this.id)}]);//调用方法
+//延迟触发事件
+
+
+
+	$("#litPic li").mouseover(function(){
+		                                 clearInterval(setIn);
+										 
+										 
+										delay.apply(this,[0.3,function(){
+													   
+											$("#litPic li").removeClass("s");
+											$(this).addClass("s");
+											
+											var index=$(this).index();
+										//	var bigindex=$("#bigImg li");
+										    
+											if(i != index){
+												
+												bigImg.fadeOut("slow");
+												bigImg.css("z-index","0");
+												
+												bigImg.eq(index).fadeIn("slow");
+												bigImg.eq(index).css("z-index","1");
+												
+												i = index;
+												
+											}
+											
+										
+										}]); 
+										
+										
+										
+										}).mouseout(function(){setIn=setInterval(function(){
+										   show();
+										   },4000);});
+
+
+
+
+
+
+
+
+
+
+	$("#recommendTit a").mouseover(function(){
+		
+		
+		$("#recommendTit a").removeClass("s");
+		$(this).addClass("s");
+		
+		var index = $(this).index();
+		var i=$("#recommendMain ul.dispBloc").index();
+		
+		if(i != index){
+			$("#recommendMain ul").removeClass("dispBloc").css("display","none");
+			$("#recommendMain ul").eq(index).show();
+			$("#recommendMain ul").eq(index).addClass("dispBloc");
+		}
+	
+	});
+
+
+
+
+
+
+
+	$("#detail_desc_tab a").click(function(){
+		
+		
+		$("#detail_desc_tab a").removeClass("cur");
+		$(this).addClass("cur");
+		
+		var index = $(this).index();
+		var i=$("#detail_desc_main div.BlockBox").index();
+		
+		if(i != index){
+			$("#detail_desc_main div.n").removeClass("BlockBox").css("display","none");
+			$("#detail_desc_main div.n").eq(index).show();
+			$("#detail_desc_main div.n").eq(index).addClass("BlockBox");
+		}
+	
+	});
+	
+	
+	
+	
+	
+	$("#ProdList dl").hover(function(){
+		
+		$(this).find("dt div.like").toggle();
+		
+	});
+	
+	
+	$("#starts span").mouseover(function(){
+		
+		$("#starts span").removeClass("choice");
+		
+		var n = $(this).index();
+		
+		for(var i=0; i<=n; i++){
+		  $("#starts span").eq(i).addClass("choice");
+		}
+		
+		
+	});
+	
+	
+	
+	$("#fbpl").click(function(){
+		
+		$("#plBox").slideToggle();
+		
+	});
+	
+	
+	
+	
+
+	
+	
+
+
+	
+	
+});
+
+
+
+
+
+function switchingTwo(obj,val){ //点击切换样式
+	var p1 = document.getElementById("PBspan1");	
+	var p2 = document.getElementById("PBspan2");	
+	if(val==1){
+			
+		document.getElementById("PBSpanA").style.display="block";
+		document.getElementById("PBSpanB").style.display="none";
+	}else if(val==2){
+
+		
+		document.getElementById("PBSpanA").style.display="none";
+		document.getElementById("PBSpanB").style.display="block";
+	}
+	
 }
 
-#slider img {
- position:absolute;
- top:0px;
- left:0px;
- display:none;
+
+function switching(obj,val){ //点击切换样式
+	var p1 = document.getElementById("PBspan1");	
+	var p2 = document.getElementById("PBspan2");	
+	var p3 = document.getElementById("PBspan3");	
+	if(val==1){
+			
+		document.getElementById("PBSpanA").style.display="block";
+		document.getElementById("PBSpanB").style.display="none";
+		document.getElementById("PBSpanC").style.display="none";
+	}else if(val==2){
+
+		
+		document.getElementById("PBSpanA").style.display="none";
+		document.getElementById("PBSpanB").style.display="block";
+		document.getElementById("PBSpanC").style.display="none";
+	}else{
+		
+		document.getElementById("PBSpanA").style.display="none";
+		document.getElementById("PBSpanB").style.display="none";
+		document.getElementById("PBSpanC").style.display="block";
+		
+	}
+	
 }
 
-#slider a {
- border:0;
- display:block;
-}
 
-#slider .nivo-controlNav {
- position:absolute;
- left:50%;
- bottom:-24px;
- margin-left:-120px; /* Tweak this to center bullets */
-}
 
-a.nivo-control {
- float: left;
- background-color:#bababa;
- text-indent:-9999px;
- display: block;
- width:40px;
- height:6px;
- margin-right:10px;
-}
 
-div.line1 {
- float: left;
- width: 0px;
- height: 6px;
-}
 
-div.line2 {
 
- float: left;
- width: 0px;
- height: 6px;
-}
 
-a.nivo-control:hover, a.active {
-background-color:#cb0000;
-}
-
-#slider .nivo-directionNav a {
- display:block;
- width:30px;
- height:30px;
- text-indent:-9999px;
- border:0;
-}
-
-#slider a.nivo-nextNav {
- width:40px;
- height:60px;
- background:url(../images/arrowRight.png);
-}
-
-#slider a.nivo-prevNav {
- width:40px;
- height:60px;
- background: url(../images/arrowLeft.png);
-}
 

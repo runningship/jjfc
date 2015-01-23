@@ -5,33 +5,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>乐事不动产</title>
+<title>和瑞金江房地产投资咨询有限公司
+</title>
 <link rel="stylesheet" type="text/css" href="style/css.css" />
-<link rel="stylesheet" type="text/css" href="style/cons.css" />
+<link rel="stylesheet" type="text/css" href="style/info.css" />
 </head>
 
 <body>
-
-<div class="warp w_topLine"></div>
-
-<jsp:include page="header.jsp" />
-
-<div class="conWarp marginTop45">
-
-     <div class="banner1">   <img src="images/banner1.jpg">  </div>
-	
-	 <c:if test="${hasLeft}">
-	 	<jsp:include page="left.jsp" />
-	 </c:if>
+<div class="warp h360 poR">
      
-    ${board.conts }
-    
-    
+        
+     <div class="infoBigImg"><span></span></div> 
+         
+     <div class="warp poA" style="top:0; left:0; z-index:100;">
+          <div class="wCon">
+               
+               <div class="fl mTop50"><img src="images/logo.png" /></div>
+               
+               <ul class="fr mTop50 nav">
+                    <li>
+                        <a href="index.jsp">
+                            首页 <br />
+                            <em>main</em>
+                            <i></i>
+                        </a>
+                    </li>
+                    <jsp:include page="header.jsp" />
+               </ul>
+          
+          </div>
+     </div>
 
 </div>
 
-<jsp:include page="footer.jsp" />
+<div class="warp">
 
+     <div class="wCon" style="overflow:hidden">
+    	${topBoard.conts }
+     </div>
+
+</div>
+<jsp:include page="footer.jsp" />
 </body>
 </html>
-
