@@ -1,0 +1,93 @@
+
+
+.h360{ height:360px; border-bottom:5px solid #def0f8;}
+
+.infoBigImg{ width:100%; height:360px; overflow:hidden;}
+
+.infoBigImg span{ display:block; width:100%; height:360px; background:url(../images/banner3.jpg) top center no-repeat;}
+
+
+.infoLeft{ width:200px; background-color:#1b9bd8; float:left;}
+
+.infoLeft h2{ width:100%; line-height:60px; color:#ffffff; font-weight:normal; font-size:24px; text-align:center; border-bottom:1px solid #00699b; background-color:#007ab4;}
+
+.infoLeft .list{ width:100%; text-align:center; border-top:1px solid #37afe8; padding:10px 0;}
+
+.infoLeft .list a{ display:block; line-height:35px; width:100%; color:#e8f1f5; position:relative;}
+
+.infoLeft .list a:hover, .infoLeft .list a.sel{ color:#ffffff; background-color:#00699b;}
+
+.infoLeft .list a i{position:absolute; left:25px; top:14px; display:block; width: 0;height: 0;
+					border-top: 4px solid transparent;
+					border-left: 4px solid #00699b;
+					border-bottom: 4px solid transparent;}
+
+.infoLeft .list a:hover i, .infoLeft .list a.sel i{border-left: 4px solid #ffffff;}
+
+
+.infoRight{ width:800px; float:right;min-height: 350px;}
+
+.infoRight .tit{ width:100%; height:50px; line-height:50px; border-bottom:1px solid #def0f8;}
+
+.infoRight .tit .b{ font-size:18px; color:#333333; margin-left:25px;}
+
+.infoRight .tit .s{ font-size:12px; font-family:"宋体"; color:#999999;}
+
+.infoRight .infoCon{ width:760px; margin:15px 15px 15px 25px; font-family:"宋体"; color:#333333; line-height:25px;}
+
+.infoRight .infoCon p{ text-indent:25px;}
+
+
+
+.infoRight .listCon{ width:760px; margin:15px 15px 15px 25px; font-family:"宋体"; color:#333333; line-height:25px;}
+
+.infoRight .listCon ul{}
+
+
+.infoRight .listCon ul li {
+    border-bottom: 1px dashed #e0e0e0;
+    clear: both;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 6px; position:relative; padding-left:15px;
+}
+
+.infoRight .listCon ul li span {
+    color: #525252;
+    float: right;
+}
+
+.infoRight .listCon ul li i{position:absolute; left:0; top:12px; display:block; width: 0;height: 0;
+					border-top: 4px solid transparent;
+					border-left: 4px solid #c1cbd0;
+					border-bottom: 4px solid transparent;}
+					
+
+.page {
+    line-height: 24px;
+    padding: 0 15px 25px 30px;
+    text-align: center;
+	margin-top:25px;
+}
+
+.page a {
+    background-color:#c0c0c0;
+    border: 1px solid #c0c0c0;
+    color: #fff;
+    display: inline-block;
+    margin: 0 3px;
+    padding: 0 7px;
+    vertical-align: top;
+}
+
+.page span{
+    display: inline-block;
+    margin: 0 3px;
+    padding: 0 7px;	
+}
+
+.page a:hover, .page .current {
+    background-color:#00699b;
+    border: 1px solid #00699b;
+    color: #fff;
+}
