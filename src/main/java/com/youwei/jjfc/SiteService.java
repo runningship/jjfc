@@ -85,12 +85,14 @@ public class SiteService {
 		}
 		
 		Board centerModule = dao.getUniqueByKeyValue(Board.class, "label", "index_center");
+		mv.jspData.put("index_center", centerModule);
 		mv.jspData.put("jianjie", HTMLSpirit.delHTMLTag(centerModule.conts));
 		//右侧业务
 		page.setPageSize(4);
 		Board biz = dao.getUniqueByKeyValue(Board.class, "label", "index_right");
 		page = dao.findPage(page, "select name as name ,id as id from Board where fid=?  order by orderx " , true, new Object[]{biz.id});
 		mv.jspData.put("index_right_list", page.getResult());
+		mv.jspData.put("index_right_biz", biz);
 		
 		//明星店面
 		Board star = dao.getUniqueByKeyValue(Board.class, "label", "star_dept");

@@ -89,7 +89,7 @@
           
           <div class="aboutBox">
           
-               <div class="tit"><a href="#">关于金江</a></div>
+               <div class="tit"><a href="newsList.jsp?topId=${index_center.fid }&bid=${index_center.id }">关于金江</a></div>
                
                <div class="con">
                     
@@ -102,8 +102,8 @@
           </div>
           
           <div class="yewBox fr">
-            <c:forEach items="${index_right_list}" var="tmp" varStatus="pos">
-              <a href="#" <c:if test="${pos.index==0}">class="sel"</c:if> >${tmp.name}</a>
+            <c:forEach items="${index_right_list}" var="board" varStatus="pos">
+              <a href="newsList.jsp?topId=${index_right_biz.id}&bid=${board.id}" <c:if test="${pos.index==0}">class="sel"</c:if> >${board.name}</a>
             </c:forEach>
                
           </div>
@@ -118,27 +118,6 @@
 
      <div class="wCon">
           ${starDept.conts}
-          <!-- <dl>
-              <dt><img src="images/md1.jpg" /></dt>
-              <dd class="tit">金江房产长江西路店</dd>
-              <dd>电话：<strong>0551-62885799</strong></dd>
-          </dl>
-          <dl class="mleft">
-              <dt><img src="images/md2.jpg" /></dt>
-              <dd class="tit">金江房产长江西路店</dd>
-              <dd>电话：<strong>0551-62885799</strong></dd>
-          </dl>
-          <dl class="mleft">
-              <dt><img src="images/md3.jpg" /></dt>
-              <dd class="tit">金江房产长江西路店</dd>
-              <dd>电话：<strong>0551-62885799</strong></dd>
-          </dl>
-          <dl class="mleft">
-              <dt><img src="images/md4.jpg" /></dt>
-              <dd class="tit">金江房产长江西路店</dd>
-              <dd>电话：<strong>0551-62885799</strong></dd>
-          </dl> -->
-          
      </div>
 
 </div>
