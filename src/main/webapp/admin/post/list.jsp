@@ -44,6 +44,7 @@ function doSearch(){
 	    type: 'get',
 	    url: '${projectName}/c/admin/post/listData',
 	    data: a,
+	    dataType:'json',
 	    mysuccess: function(json){
 	        buildHtmlWithJsonArray("repeat",json['data']);
 	        Page.setPageInfo(json);
