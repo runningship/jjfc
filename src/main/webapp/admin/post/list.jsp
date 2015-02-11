@@ -41,10 +41,9 @@
 function doSearch(){
 	var a=$('form[name=form1]').serialize();
 	YW.ajax({
-	    type: 'get',
+	    type: 'post',
 	    url: '${projectName}/c/admin/post/listData',
 	    data: a,
-	    dataType:'json',
 	    mysuccess: function(json){
 	        buildHtmlWithJsonArray("repeat",json['data']);
 	        Page.setPageInfo(json);

@@ -36,7 +36,7 @@ public class SiteService {
 			Board currentBoard = dao.get(Board.class, bid);
 			mv.jspData.put("currentBoard", currentBoard);
 			params.add(bid);
-			page.setPageSize(2);
+			page.setPageSize(10);
 			page = dao.findPage(page, "select id as id, title as title , addtime as addtime from Post where bid=? order by addtime desc", true,params.toArray());
 		}
 //		else{

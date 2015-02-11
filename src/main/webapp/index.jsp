@@ -34,7 +34,7 @@
                
                <ul class="fr mTop50 nav">
                     <li>
-                        <a href="/index.jsp" class="sel">
+                        <a href="index.jsp" class="sel">
                             首页 <br />
                             <em>main</em>
                             <i></i>
