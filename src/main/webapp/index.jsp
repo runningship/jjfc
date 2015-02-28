@@ -12,15 +12,39 @@
 </head>
 
 <body>
-<div class="warp h560 poR">
+<div class="warp h560 poR" style="border-bottom:7px solid #efe5de;">
      
          <div class="bigBgImg">
                
                     <ul id="bigPic">
                     
-                        <li style="z-index:1; display:list-item; background:url(images/banner1.jpg) no-repeat center top;"></li>
-                        <li style="z-index:0; display:none; background:url(images/banner2.jpg) no-repeat center top;"></li>
-                        <li style="z-index:0; display:none; background:url(images/banner3.jpg) no-repeat center top;"></li>
+                        <li style="z-index:1; display:list-item; background:url(images/banner1.jpg) no-repeat center top;">
+                            
+                            <div class="con">
+                                 <img class="adT1" src="images/adT1.png">
+                                 <img class="adT2" src="images/adT2.png">
+                                 <img class="adT3" src="images/adT3.png">
+                            </div>
+                            
+                        </li>
+                        <li style="z-index:0; display:none; background:url(images/banner2.jpg) no-repeat center top;">
+                            
+                            <div class="con">
+                                 <img class="adT1" src="images/adT1.png">
+                                 <img class="adT2" src="images/adT2.png">
+                                 <img class="adT3" src="images/adT3.png">
+                            </div>
+                            
+                        </li>
+                        <li style="z-index:0; display:none; background:url(images/banner3.jpg) no-repeat center top;">
+                            
+                            <div class="con">
+                                 <img class="adT1" src="images/adT1.png">
+                                 <img class="adT2" src="images/adT2.png">
+                                 <img class="adT3" src="images/adT3.png">
+                            </div>
+                            
+                        </li>
                     
                     </ul>
                     <ul id="litPic"></ul>
@@ -32,7 +56,7 @@
                
                <div class="fl mTop50"><img src="images/logo.png" /></div>
                
-               <ul class="fr mTop50 nav">
+               <ul class="fr mTop50 nav" style="background-color:#be1027;">
                     <li>
                         <a href="index.jsp" class="sel">
                             首页 <br />

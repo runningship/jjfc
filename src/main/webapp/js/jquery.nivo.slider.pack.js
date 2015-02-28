@@ -15,6 +15,51 @@ $(function(){
 	}
 	
 	
+	function textSlide(a){
+		 
+		 bigImg.eq(a).find("img").css({"opacity":"0"}); 
+		 textS1L(a);
+	}
+	
+	function textS1L(a){
+		
+		bigImg.eq(a).find("img.adT1").css({"left":"0","top":"300px"});//初始位置
+		bigImg.eq(a).find("img.adT2").css({"right":"0","top":"315px"});//初始位置
+		bigImg.eq(a).find("img.adT3").css({"right":"20px","bottom":"20px"});//初始位置
+		
+		bigImg.eq(a).find("img.adT1").animate({
+			left:'480px',       //adT1最终位置
+			opacity:'1'
+		},470,function(){textS3B(a)});
+		
+	}
+	
+	function textS2R(a){
+		
+		bigImg.eq(a).find("img.adT2").animate({
+			opacity:'1' //adT2最终位置  和透明度
+		},1000);
+		
+	}
+	
+	function textS3B(a){
+		
+		bigImg.eq(a).find("img.adT3").animate({
+			right:'150px',
+			bottom:'168px', //adT3最终位置  和透明度
+			opacity:'1'
+		},700,function(){textS2R(a)});
+		
+	}
+	
+	textSlide(0);
+	
+	
+	
+	
+	
+	
+	
 	var i = 0;
 	function show(){
 		
@@ -30,6 +75,7 @@ $(function(){
 			bigImg.eq(i+1).css("z-index","1");
 			bigImg.eq(i+1).fadeIn("slow");
 			litImg.eq(i+1).addClass("s");
+			textSlide(i+1);
 			i++;
 			
 		}else{
@@ -37,6 +83,7 @@ $(function(){
 			bigImg.eq(0).css("z-index","1");
 			bigImg.eq(0).fadeIn("slow");
 			litImg.eq(0).addClass("s");
+			textSlide(0);
 			i = 0;
 			
 		}
@@ -90,6 +137,8 @@ $(function(){
 							
 							bigImg.eq(index).fadeIn("slow");
 							bigImg.eq(index).css("z-index","1");
+							
+							textSlide(index);
 							
 							i = index;
 							

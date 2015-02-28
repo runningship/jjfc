@@ -22,7 +22,7 @@
                
                <div class="fl mTop50"><img src="images/logo.png" /></div>
                
-               <ul class="fr mTop50 nav">
+               <ul class="fr mTop50 nav" style="background-color:#be1027;">
                     <li>
                         <a href="index.jsp">
                             首页 <br />
@@ -46,9 +46,9 @@
           
             <div class="infoRight">
             
-                 <div class="tit"><span class="fr s" style="float:left;margin-left:21px;">当前位置：首页 > ${topBoard.name} > ${currentBoard.name}</span></div>
+                 <div class="tit"><span class="fr s" style="float:left;margin-left:20px;">当前位置：首页 > ${topBoard.name} > ${currentBoard.name}</span></div>
                  <c:if test="${currentBoard.type==0}">
-                  <div class="infoRight">
+                  <div style="margin:15px 20px;">
                        ${currentBoard.conts }
                   </div>
                 </c:if>

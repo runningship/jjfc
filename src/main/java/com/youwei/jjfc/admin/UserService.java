@@ -33,7 +33,7 @@ public class UserService {
 	public ModelAndView logout(){
 		ModelAndView mv = new ModelAndView();
 		ThreadSession.getHttpSession().removeAttribute("user");
-		mv.redirect="/admin/public/login.jsp";
+		mv.redirect="../public/login.jsp";
 		return mv;
 	}
 	

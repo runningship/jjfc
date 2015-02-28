@@ -22,7 +22,7 @@
                
                <div class="fl mTop50"><img src="images/logo.png" /></div>
                
-               <ul class="fr mTop50 nav">
+               <ul class="fr mTop50 nav" style="background-color:#be1027;">
                     <li>
                         <a href="index.jsp">
                             首页 <br />
@@ -45,8 +45,11 @@
       	<jsp:include page="left.jsp" />
 	    <div class="infoRight">
             <div class="tit"><span class="fr s">当前位置：首页 > ${topBoard.name} > ${currentBoard.name}</span></div>
-            <div class="tit"><span class="fl b">${news.title}</span></div>
-            ${news.conts}
+            <div style="margin:0 15px;">
+              <h2 style="margin-top:15px; text-align:center;">${news.title}</h2>
+              <p style="margin:10px 0; text-align:center; color:#999999; background-color:#f4f4f4; line-height:36px;">发布时间:2014-02-05</p>
+              <div style="font-family:'宋体'";>${news.conts}</div>
+            </div>
          </div>
      </div>
 

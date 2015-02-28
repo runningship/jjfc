@@ -22,7 +22,7 @@
                
                <div class="fl mTop50"><img src="images/logo.png" /></div>
                
-               <ul class="fr mTop50 nav">
+               <ul class="fr mTop50 nav" style="background-color:#be1027;">
                     <li>
                         <a href="index.jsp">
                             首页 <br />

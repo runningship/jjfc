@@ -37,7 +37,9 @@ body{font: 12px/1.5 Tahoma,arial,"Hiragino Sans GB","microsoft yahei",宋体;}
 
 #bigPic li{ position:absolute; top:0; left:0; z-index:0; width:100%; text-align:center; display:inline-block; width:100%; height:560px;}
 
-#bigPic li img{ width:813px; height:560px;}
+#bigPic li div.con{ width:1002px; height:560px; margin:0 auto; position:relative;}
+
+#bigPic li div.con img{ position:absolute; opacity:0;}
 
 #litPic{ width:100%; text-align:center; height:30px; position:absolute; z-index:10; bottom:0;}
 
@@ -48,21 +50,21 @@ body{font: 12px/1.5 Tahoma,arial,"Hiragino Sans GB","microsoft yahei",宋体;}
 
 
 
-.nav{ height:100px; background-color:#ffffff;}
+.nav{ height:75px; background-color:#ffffff; font-family:"微软雅黑";}
 
-.nav li{ float:left; line-height:18px; width:108px;}
+.nav li{ float:left; line-height:14px; width:108px;}
 
-.nav li a{ display:inline-block; width:100%; height:68px; padding-top:32px; font-size:13px; color:#223c7f; text-align:center; position:relative;}
+.nav li a{ display:inline-block; width:100%; height:50px; padding-top:25px; font-size:13px; color:#ffffff; text-align:center; position:relative;}
 
-.nav li a.sel{ background-color:#1b9bd8; color:#ffffff;}
-.nav li a:hover{ background-color:#44b8ef; color:#ffffff;}
-.nav li a:hover em,.nav li a.sel em{color:#eeeeee;}
+.nav li a.sel{ background-color:#f7f7f7; color:#000000;}
+.nav li a:hover{ background-color:#f7f7f7; color:#000000;}
+.nav li a:hover em,.nav li a.sel em{color:#999999;}
 
-.nav li a i{ background:none; position:absolute; bottom:15px; left:50px; display:block; width:9px; height:7px;}
+.nav li a i{ background:none; position:absolute; bottom:8px; left:50px; display:block; width:9px; height:7px;}
 
 .nav li a.sel i{ background:url(../images/dot.png) no-repeat;}
 
-.nav li a em{ color:#6474a7; text-transform:uppercase; font-size:10px;}
+.nav li a em{ color:#dcadb3; text-transform:uppercase; font-size:11px;}
 
 
 .newsBox{ width:342px; float:left; margin-top:30px;}
@@ -71,17 +73,18 @@ body{font: 12px/1.5 Tahoma,arial,"Hiragino Sans GB","microsoft yahei",宋体;}
 
 .newsBox .tit a{ display:inline-block; height:40px; text-align:center; color:#333333; width:33%; border:1px solid #dce2e4; border-left:none; background-color:#f3f7f8; float:left;}
 
-.newsBox .tit a.sel{ border-top:3px solid #1b9bd8; border-bottom:none; height:37px; background-color:#ffffff;}
+.newsBox .tit a.sel{ border-top:3px solid #ca770a; border-bottom:none; height:37px; background-color:#ffffff;}
 
 .newsBox .con{ width:100%; display:inline-block; margin:15px 0; height:125px; overflow:hidden;}
-.newsBox .con li {background:url(../images/o_ico_02.jpg) no-repeat 0 10px; line-height: 25px; padding-left: 10px;}
-
+.newsBox .con li {background:url(../images/o_ico_02.jpg) no-repeat 0 10px; line-height: 25px; padding-left: 10px; font-family:"宋体";}
+.newsBox .con li a{ color:#666666;}
+.newsBox .con li a:hover{ color:#000000;}
 
 .aboutBox{ width:375px; float:left; margin-top:30px; margin-left:30px;}
 
 .aboutBox .tit{ width:100%; height:41px; text-align:center; border-bottom:1px solid #dce2e4; border-left:1px solid #dce2e4;}
 
-.aboutBox .tit a{ display:block; border-top:3px solid #1b9bd8; border-bottom:none; border-right:1px solid #dce2e4; height:40px; line-height:37px; background-color:#ffffff; width:105px; color:#333333; font-size:13px;}
+.aboutBox .tit a{ display:block; border-top:3px solid #ca770a; border-bottom:none; border-right:1px solid #dce2e4; height:40px; line-height:37px; background-color:#ffffff; width:105px; color:#333333; font-size:13px;}
 
 .aboutBox .con{ margin:15px 0;}
 
@@ -96,15 +99,15 @@ body{font: 12px/1.5 Tahoma,arial,"Hiragino Sans GB","microsoft yahei",宋体;}
 	text-indent:25px;
     display: block;
     line-height: 23px;
-    overflow: hidden; color:#333333;
+    overflow: hidden; color:#666666;
 }
 
 
 .yewBox{ width:200px; border:1px solid #e8eef0; margin-top:30px; padding:7px;}
 
-.yewBox a{ display:block; width:100%; text-align:center; height:40px; line-height:40px; margin:3px 0; background-color:#f5f5f5;}
+.yewBox a{ display:block; width:100%; text-align:center; height:40px; line-height:40px; margin:3px 0; background-color:#f5f5f5; color:#666666;}
 
-.yewBox a:hover, .yewBox a.sel{ background-color:#1b9bd8; color:#ffffff;}
+.yewBox a:hover, .yewBox a.sel{ background-color:#ca770a; color:#ffffff;}
 
 
 .md_pic{ background-color:#eff2f4; margin-top:30px;}
@@ -123,14 +126,14 @@ body{font: 12px/1.5 Tahoma,arial,"Hiragino Sans GB","microsoft yahei",宋体;}
 
 .md_pic li strong{ color:#f90000;}
 
-h3.tit{ float:left; color:#ffffff; font-weight:normal; height:35px; line-height:35px; padding:0 30px; background-color:#1b9bd8; margin-top:30px;}
+h3.tit{ float:left; color:#ffffff; font-weight:normal; height:35px; line-height:35px; padding:0 30px; background-color:#ca770a; margin-top:30px;}
 
 ul.box{ width:100%; float:left; margin:15px 0;}
 
 ul.box li{ float:left; margin:5px 50px 5px 0;}
 ul.box li.noMar{ margin-right:0;}
 
-.footerBg{ background-color:#1b9bd8; height:125px; font-family:"宋体"; line-height:28px; margin-top:15px;}
+.footerBg{ background-color:#777777; height:125px; font-family:"宋体"; line-height:28px; margin-top:15px;}
 
 .footLeft{ width:700px; color:#ffffff; margin-top:20px;}
 
