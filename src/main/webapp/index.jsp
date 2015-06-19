@@ -9,10 +9,21 @@
 <link rel="stylesheet" type="text/css" href="style/css.css" />
 <script src="js/jquery-1.6.4.min.js"></script>
 <script src="js/jquery.nivo.slider.pack.js"></script> 
+<style type="text/css">
+.md_pic ul{ margin:15px 0;}
+.youxiu{color: #ffffff;
+  font-weight: normal;
+  height: 35px;
+  line-height: 35px;
+  background-color: #ca770a;
+  width: 190px;
+  text-align: center;  margin-top: 10px;
+  margin-bottom: -10px;}
+</style>
 </head>
 
 <body>
-<div class="warp h560 poR" style="border-bottom:7px solid #efe5de;">
+<div class="warp h560 poR" style="">
      
          <div class="bigBgImg">
                
@@ -53,9 +64,9 @@
          
      <div class="warp poA" style="top:0; left:0; z-index:100;">
           <div class="wCon">
-               
-               <div class="fl mTop50"><img src="images/logo.png" /></div>
-               
+            <div>
+              <img src="images/logo.png"/>
+            </div>
                <ul class="fr mTop50 nav" style="background-color:#be1027;">
                     <li>
                         <a href="index.jsp" class="sel">
@@ -71,8 +82,8 @@
      </div>
 
 </div>
-
-<div class="warp">
+<img src="images/bg.jpg" style="margin-left:auto;margin-right:auto;display:block;width: 1000px; height: 110px;margin-top:10px;"/>
+<div class="warp" style="margin-top:-10px;">
 
      <div class="wCon">
      
@@ -137,13 +148,18 @@
      </div>
 
 </div>
-
+<div></div>
 <div class="warp md_pic">
-
-     <div class="wCon">
+	
+     <div class="wCon" style="height:250px;">
+     	<div ><h3 class="youxiu">优秀店面</h3></div>
           ${starDept.conts}
      </div>
 
+	<div class="wCon">
+		<div ><h3 class="youxiu" style="margin-top:18px;">优秀员工</h3></div>
+          ${starEmployee.conts}
+     </div>
 </div>
 
 <div class="warp">

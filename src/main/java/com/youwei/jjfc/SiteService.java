@@ -27,7 +27,7 @@ public class SiteService {
 	public ModelAndView newsList(Page<Map> page,Integer topId , Integer bid){
 		ModelAndView mv = new ModelAndView();
 		List<Object> params = new ArrayList<Object>();
-		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' order by orderx");
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' and label<>'star_employee'  order by orderx");
 		List<Board> list = dao.listByParams(Board.class, "from Board where fid=? order by orderx" ,topId);
 		if(bid==null){
 			bid=list.get(0).id;
@@ -56,7 +56,7 @@ public class SiteService {
 	@WebMethod
 	public ModelAndView index(){
 		ModelAndView mv = new ModelAndView();
-		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' order by orderx");
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept'  and label<>'star_employee' order by orderx");
 		mv.jspData.put("modules", modules);
 		Board leftModule = dao.getUniqueByKeyValue(Board.class, "label", "index_left");
 		Page<Map> page = new Page<Map>();
@@ -97,6 +97,9 @@ public class SiteService {
 		//明星店面
 		Board star = dao.getUniqueByKeyValue(Board.class, "label", "star_dept");
 		mv.jspData.put("starDept", star);
+		//明星店员
+		Board starEmployee = dao.getUniqueByKeyValue(Board.class, "label", "star_employee");
+		mv.jspData.put("starEmployee", starEmployee);
 		return mv;
 	}
 	
@@ -106,7 +109,7 @@ public class SiteService {
 		Board board = dao.get(Board.class, news.bid);
 		ModelAndView mv = new ModelAndView();
 		//一级菜单
-		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' order by orderx");
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' and label<>'star_employee' order by orderx");
 		//二级菜单
 		List<Board> list = dao.listByParams(Board.class, "from Board where fid=? order by orderx" ,board.fid);
 		mv.jspData.put("boards", list);
@@ -123,7 +126,7 @@ public class SiteService {
 		Board topBoard = dao.get(Board.class, id);
 		ModelAndView mv = new ModelAndView();
 		//一级菜单
-		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' order by orderx");
+		List<Board> modules = dao.listByParams(Board.class, "from Board where fid is null and label <> 'star_dept' and label<>'star_employee' order by orderx");
 		//二级菜单
 //		List<Board> list = dao.listByParams(Board.class, "from Board where fid=? order by orderx" ,board.fid);
 //		mv.jspData.put("boards", list);
